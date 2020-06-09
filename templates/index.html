@@ -1,37 +1,69 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Decision Maker</title>
+	<title>Make A Decision</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <style class= "bg_colour">
+  	body {
+  		background-color: #21D4FD;
+		background-image: linear-gradient(19deg, #21D4FD 0%, #B721FF 100%);
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+  	}
+  </style>
 </head>
+
 <body>
-    <h3>Type elements seperated by commas</h3>
-    
-	<form action= "/" method="post">		
-        <label for = "decision">Your list: </label>
+  <div class= "container">
+	<h2>Type elements seperated by commas</h2>
+	    
+	<form action= "/" method="post">
+	  	<div class="form-group">    
+	      <h3 for = "test_name">Your list: </h3>
 
-        <input type = "text"
-               name = "text_name"
-               placeholder= "heads, tails" />
+	      <input type = "text" name = "text_name"
+	           placeholder= "heads, tails"
+	           class= "form-control input-lg" id="inputlg" />
+	    </div>
 
-        <input name="out_of" type="number" min="1"
-               max="1000" step="1" value="3">
+	    <div class="form-group">    
+	      	<input name="out_of" type="number" min="1"
+	               max="1000" step="1" value="3"
+	               class= "form-control input-lg" id="inputlg">
+	    </div>
 
-        <input type="submit" value="Submit">
-    </form>
-
-    <p>{{decision}}</p>
-
-    <table border= "1" cellspacing = "2" cellpadding= "5">
-        <tr>
-            <th>Element</th>
-            <th>Count</th>
-         </tr>
-        {% for key, value in counter.items() %}
-           <tr>
-                <td> {{ key }} </th>
-                <td> {{ value }} </td>
-           </tr>
-        {% endfor %}
-    </table>
+	    <div style="text-align:center">
+	      	<button type="submit" class="btn btn-success" style= "width: 200px;">Submit</button>
+	    </div>
+	    
+	</form>
+	<br>
+	<div style=  "text-align: center;">
+		{% for i in decision %}
+		    <h3 style= "display: inline;">| {{i}} |</h3>
+		{% endfor %}
+	</div>
+	<br>
+	<font size= "5">
+		<table class="table table">
+		    <thead>
+		        <tr>
+		            <th>Element</th>
+		            <th>Count</th>
+		        </tr>
+		    </thead>
+		    {% for key, value in counter.items() %}
+		        <tr>
+		            <td> {{ key }} </td>
+		            <td> {{ value }} </td>
+		        </tr>
+		    {% endfor %}
+		</table>
+	</font>
+  </div>
 </body>
 </html>
