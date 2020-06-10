@@ -1,0 +1,28 @@
+@font-face { font-family: orator; src: url('fonts/OratorStd.otf'); }
+@font-face { font-family: arista; src: url('fonts/Arista2.0 Alternate light.ttf'); }
+
+.made_by_font {
+	text-align: center;
+	color: white;
+	font-family: orator
+}
+
+.shzr_font {
+	text-align: center;
+	color: white;
+	letter-spacing: 2px;
+	font-family: arista;
+	position: fixed;
+	bottom: 10px;
+}
+
+#panel, #flip {
+  color: white;
+  text-align: center;
+}
+
+#panel {
+  padding: 20px;
+  display: none;
+  white-space: pre;
+}
