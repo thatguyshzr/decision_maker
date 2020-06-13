@@ -7,3 +7,5 @@ What you need is a decision that is unbiased and random. It plays no favorites, 
 Let this site decide for you.
 
 https://make-a-decision.herokuapp.com/
+
+![alt text](https://github.com/thatguyshzr/decision_maker/blob/master/make_a_decision.PNG?raw=true "Make a decision")
