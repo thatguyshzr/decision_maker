@@ -4,7 +4,7 @@ from random import choice
 def decision_maker(things_to_make_decision_on, out_of= 1):
     list_of_things= []
     thing_list= str(things_to_make_decision_on).split(',')
-    thing_list= [i for i in thing_list if i]    # remove blank strings
+    thing_list= [i.strip(' ') for i in thing_list if i]    # remove blank strings
     list_of_things= [choice(thing_list) for i in range(out_of)]
 
     return list_of_things
