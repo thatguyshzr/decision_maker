@@ -1,8 +1,7 @@
 # heed the decision of Python, the unbaised.
 from random import choice
-from flask import jsonify
 
-def decision_maker(things_to_make_decision_on, out_of= 10):
+def decision_maker(things_to_make_decision_on, out_of= 1):
     list_of_things= []
     thing_list= str(things_to_make_decision_on).split(',')
     thing_list= [i for i in thing_list if i]    # remove blank strings
