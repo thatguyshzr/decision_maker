@@ -1,4 +1,3 @@
-# https://stackoverflow.com/questions/55447599/how-to-send-data-in-flask-to-another-page
 from flask import Flask, render_template, request
 from decision_maker import *
 
@@ -22,5 +21,5 @@ def index():
 
 if __name__ == '__main__':
     # app.run(debug=True, port= 5000)
-    app.run(host="0.0.0.0", port=80)
+    app.run()
 
